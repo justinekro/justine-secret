@@ -1,0 +1,22 @@
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p> <%= label_tag 'name', "Quel est votre nom ?" %> </p>
+  <p> <%= text_field_tag 'name' %> </p>
+
+  <p> <%= label_tag 'email', "Quel est votre email ?" %> </p>
+  <p> <%= text_area_tag 'email' %> </p>
+
+  <p> <%= label_tag 'password', "Quel est votre mot de passe ?" %> </p>
+  <p> <%= text_area_tag 'password' %> </p>
