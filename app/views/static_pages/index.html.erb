@@ -1,18 +1,19 @@
 <% if logged_in? %>
 
-<h1> <%= current_user.name %>, </h1>
-<h2> bienvenue sur le site qui vous donnera la clé de l'univers. </h2>
+<h1> <%= current_user.name %> </h1>
+<h2> Bienvenue sur le site qui vous donnera la clé de l'univers. </h2>
 
 <p> Vous souhaitez connaître la réponse à la question de l'univers ? </p>
 <p> C'est par <%= link_to("Par ici", answer_path) %> </p>
 
 <% else %>
 
-<h1> Cher visiteur, </h1>
-<h2> bienvenue sur le site qui vous donnera la clé de l'univers. </h2>
+<h1> Cher visiteur </h1>
+<h2> Bienvenue sur le site qui vous donnera la clé de l'univers. </h2>
 
 <p> Vous souhaitez connaître la réponse à la question de l'univers ? </p>
 
 <p> Veuillez vous identifier d'abord ! </p>
 <p> <%= link_to("Log in", login_path) %> </p>
+
 <% end %>

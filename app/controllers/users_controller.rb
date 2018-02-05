@@ -13,10 +13,12 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
+      flash[:success] = "Bienvenue sur le site qui vous donnera la réponse à la question de l'univers..."
 
  # On login quand un nouvel user est créé     
       log_in @user
   		redirect_to @user
+
   	else render 'new'
   	end
   end
