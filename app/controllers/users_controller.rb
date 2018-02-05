@@ -8,12 +8,20 @@ class UsersController < ApplicationController
 
   def edit
   	@user = User.find(params[:id])
+
+# On interdit à un user de modifier le profil d'un autre user    
+    if @user == current_user
+      render 'edit'
+    else 
+      flash.now[:error] = "Petit filou, vous essayez de modifier un profil qui n'est pas le vôtre !"
+      render 'show'
+    end
   end
 
   def create
   	@user = User.new(user_params)
   	if @user.save
-      flash[:success] = "Bienvenue sur le site qui vous donnera la réponse à la question de l'univers..."
+      flash[:success] = "Votre profil a bien été créé ! Bienvenue sur le site qui vous donnera la réponse à la question de l'univers..."
 
  # On login quand un nouvel user est créé     
       log_in @user
