@@ -11,10 +11,10 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "Top Secret", users_path , id: "logo" %>
+        <%= link_to "Top Secret", root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", users_path %></li>
+            <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Créer mon profil", new_user_path %></li>
             <li><%= link_to "Log in", '#' %></li>
           </ul>
