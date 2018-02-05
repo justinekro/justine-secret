@@ -4,9 +4,10 @@
  
 <%= render 'form' %>
  
-
 <%= submit_tag "Modifier mon profil utilisateur"%>
-
 
 <% end %>
 
+ <p> <%= link_to "Supprimer le profil", user_path(@user),
+              method: :delete,
+              data: { confirm: 'Etes-vous sûr ?' } %> </p>
