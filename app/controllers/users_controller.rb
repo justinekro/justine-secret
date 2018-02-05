@@ -13,6 +13,9 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
+
+ # On login quand un nouvel user est créé     
+      log_in @user
   		redirect_to @user
   	else render 'new'
   	end
