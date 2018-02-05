@@ -4,7 +4,11 @@
  
 <%= render 'form' %>
  
-<%= submit_tag "Modifier mon profil utilisateur"%>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3"> 
+	<%= submit_tag "Modifier mon profil utilisateur", class: "btn btn-primary" %>
+  </div>
+</div>
 
 <% end %>
 
