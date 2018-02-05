@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 	def destroy
 		@user = User.find(params[:id])
 		@user.destroy
-		redirect_to users_path
+		redirect_to root_path
 	end
 
 	def show
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
 	private
   	def user_params
-    	params.permit(:name, :email, :password)
+      params.permit(:name, :email, :password)
   	end
 
 end
