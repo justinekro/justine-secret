@@ -6,7 +6,7 @@
       </h2>
       <ul>
         <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+          <p><%= msg %></p>
         <% end %>
       </ul>
     </div>
@@ -16,7 +16,7 @@
   <p> <%= text_field_tag 'name' %> </p>
 
   <p> <%= label_tag 'email', "Quel est votre email ?" %> </p>
-  <p> <%= text_area_tag 'email' %> </p>
+  <p> <%= text_field_tag 'email' %> </p>
 
   <p> <%= label_tag 'password', "Quel est votre mot de passe ?" %> </p>
-  <p> <%= text_area_tag 'password' %> </p>
+  <p> <%= text_field_tag 'password' %> </p>
